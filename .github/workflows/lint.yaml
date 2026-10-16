@@ -1,4 +1,4 @@
-name: Lint
+name: Checks
 
 on:
   push:
@@ -8,21 +8,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
       - name: Setup PNPM
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6.1.0
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7.1.0
         with:
-          node-version-file: .nvmrc
+          node-version-file: .node-version
           cache: "pnpm"
       - name: Install
-        run: pnpm install
-      - name: Lint (oxlint)
-        run: pnpm lint
-      - name: Format check (oxfmt)
-        run: pnpm format:check
+        run: pnpm install --frozen-lockfile
+      - name: Format, lint, and type checks (Vite+ and Astro)
+        run: pnpm check
+      - name: Tests (Vitest)
+        run: pnpm test
+      - name: Build (Astro and Rolldown)
+        run: pnpm build
