@@ -24,5 +24,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Format, lint, and type checks (Vite+ and Astro)
         run: pnpm check
+      - name: Tests (Vitest)
+        run: pnpm test
       - name: Build (Astro and Rolldown)
         run: pnpm build

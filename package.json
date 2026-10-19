@@ -12,7 +12,9 @@
     "check:astro": "astro sync && astro-check",
     "lint": "vp lint",
     "format:check": "vp fmt --check",
-    "format": "vp fmt"
+    "format": "vp fmt",
+    "test": "vp test run",
+    "test:watch": "vp test"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.0",
@@ -24,6 +26,7 @@
     "astro": "^7.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "effect": "^4.0.5",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "tailwind-merge": "^3.7.0",
@@ -31,8 +34,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@effect/vitest": "4.0.5",
     "typescript": "7.0.2",
-    "vite-plus": "catalog:"
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
   },
   "engines": {
     "node": "^24.11.0"
