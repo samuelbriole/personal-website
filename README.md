@@ -28,16 +28,16 @@ pnpm install
 
 Run commands from the repository root.
 
-| Command | Description |
-| --- | --- |
-| `pnpm install` | Install dependencies |
-| `pnpm dev` | Start the local Astro dev server, usually at `http://localhost:4321` |
-| `pnpm build` | Build the production site into `dist/` |
-| `pnpm preview` | Preview the production build locally |
-| `pnpm lint` | Run `oxlint` |
-| `pnpm format:check` | Check formatting for `src/` with `oxfmt` |
-| `pnpm format` | Format `src/` with `oxfmt` |
-| `pnpm astro check` | Run Astro and TypeScript diagnostics |
+| Command             | Description                                                          |
+| ------------------- | -------------------------------------------------------------------- |
+| `pnpm install`      | Install dependencies                                                 |
+| `pnpm dev`          | Start the local Astro dev server, usually at `http://localhost:4321` |
+| `pnpm build`        | Build the production site into `dist/`                               |
+| `pnpm preview`      | Preview the production build locally                                 |
+| `pnpm lint`         | Run `oxlint`                                                         |
+| `pnpm format:check` | Check formatting for `src/` with `oxfmt`                             |
+| `pnpm format`       | Format `src/` with `oxfmt`                                           |
+| `pnpm astro check`  | Run Astro and TypeScript diagnostics                                 |
 
 ## Project Structure
 
